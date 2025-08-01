@@ -1,0 +1,346 @@
+import React from 'react';
+import './Header.css';
+
+import { imgBg, logoMP, iconShape } from '../../assets/images';
+
+export default function Header() {
+  return (
+    <div
+      className="header"
+      style={{ backgroundImage: `url('${imgBg}')` }}
+    >
+      <div
+        className="navbar"
+      >
+        <div
+          className="navbar__container"
+        >
+          <div
+            className="navbar__ctas-group"
+          >
+            <div
+              className="navbar__logo"
+            >
+              <img alt="Mercado Pago Logo" className="navbar__logo-img" src={logoMP} />
+            </div>
+            <div
+              className="navbar__cta-item"
+            >
+              <div
+                className="navbar__cta-text"
+              >
+                <p>
+                  Conta Digital
+                </p>
+              </div>
+              <div
+                className="navbar__cta-icon"
+              >
+                <img
+                  alt="Arrow down"
+                  className="navbar__cta-icon-img"
+                  src={iconShape}
+                />
+              </div>
+            </div>
+            <div
+              className="navbar__cta-item"
+            >
+              <div
+                className="navbar__cta-text"
+              >
+                <p>
+                  Conta Negócio
+                </p>
+              </div>
+              <div
+                className="navbar__cta-icon"
+              >
+                <img
+                  alt="Arrow down"
+                  className="navbar__cta-icon-img"
+                  src={iconShape}
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            className="navbar__ctas-group"
+          >
+            <div
+              className="navbar__cta-item"
+            >
+              <div
+                className="navbar__cta-text"
+              >
+                <p>
+                  Iniciar sessão
+                </p>
+              </div>
+            </div>
+            <div
+              className="navbar__cta-item navbar__cta-item--primary"
+            >
+              <div
+                className="navbar__cta-text navbar__cta-text--inverted"
+              >
+                <p>
+                  Abrir conta grátis
+                </p>
+              </div>
+            </div>
+            <div
+              className="navbar__cta-item"
+            >
+              <div
+                className="navbar__cta-text"
+              >
+                <p>Ajuda</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="menu"
+      >
+        <div
+          className="menu__container"
+        >
+          <div
+            className="menu__column"
+          >
+            <div
+              className="menu__image-placeholder"
+            />
+            <div
+              className="menu__title"
+            >
+              <p>
+                A conta completa do Mercado Livre
+              </p>
+            </div>
+          </div>
+          <div
+            className="menu__column"
+          >
+            <div
+              className="menu__category"
+            >
+              <p>
+                BenefÍcios
+              </p>
+            </div>
+            <div
+              className="menu__item"
+            >
+              <div
+                className="menu__item-title"
+              >
+                <p>{`Cofrinhos até 120% do CDI   `}</p>
+              </div>
+              <div
+                className="menu__item-subtitle"
+              >
+                <p>
+                  Dinheiro separado por objetivos
+                </p>
+              </div>
+            </div>
+            <div
+              className="menu__item"
+            >
+              <div
+                className="menu__item-title"
+              >
+                <p>{`Conta até 105% do CDI `}</p>
+              </div>
+              <div
+                className="menu__item-subtitle"
+              >
+                <p>
+                  Rendimento desde o 1º dia
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            className="menu__column"
+          >
+            <div
+              className="menu__category"
+            >
+              <p>
+                Crédito
+              </p>
+            </div>
+            <div
+              className="menu__item"
+            >
+              <div
+                className="menu__item-title"
+              >
+                <p>
+                  Cartão de crédito
+                </p>
+              </div>
+              <div
+                className="menu__item-subtitle"
+              >
+                <p>
+                  Compras em até 18x sem juros
+                </p>
+              </div>
+            </div>
+            <div
+              className="menu__item"
+            >
+              <div
+                className="menu__item-title"
+              >
+                <p>
+                  Linha de crédito
+                </p>
+              </div>
+              <div
+                className="menu__item-subtitle"
+              >
+                <p>
+                  Rendimento desde o 1º dia
+                </p>
+              </div>
+            </div>
+            <div
+              className="menu__item"
+            >
+              <div
+                className="menu__item-title"
+              >
+                <p>
+                  Empréstimos
+                </p>
+              </div>
+              <div
+                className="menu__item-subtitle"
+              >
+                <p>
+                  Crédito 100% online e na hora
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            className="menu__column"
+          >
+            <div
+              className="menu__category"
+            >
+              <p>
+                Serviços
+              </p>
+            </div>
+            <div
+              className="menu__item"
+            >
+              <div
+                className="menu__item-title"
+              >
+                <p>
+                  Pagamentos
+                </p>
+              </div>
+              <div
+                className="menu__item-subtitle"
+              >
+                <p>
+                  Pix, boletos e transferências
+                </p>
+              </div>
+            </div>
+            <div
+              className="menu__item"
+            >
+              <div
+                className="menu__item-title"
+              >
+                <p>
+                  Seguros
+                </p>
+              </div>
+              <div
+                className="menu__item-subtitle"
+              >
+                <p>
+                  Proteção para o que importa
+                </p>
+              </div>
+            </div>
+            <div
+              className="menu__item"
+            >
+              <div
+                className="menu__item-title"
+              >
+                <p>
+                  Investimentos e Cripto
+                </p>
+              </div>
+              <div
+                className="menu__item-subtitle"
+              >
+                <p>{`Opções a partir de R$ 1 `}</p>
+              </div>
+            </div>
+          </div>
+          <div
+            className="menu__column"
+          >
+            <div
+              className="menu__category"
+            >
+              <p>
+                AJUDA
+              </p>
+            </div>
+            <div
+              className="menu__item"
+            >
+              <div
+                className="menu__item-title"
+              >
+                <p>
+                  Atendimento
+                </p>
+              </div>
+              <div
+                className="menu__item-subtitle"
+              >
+                <p>
+                  Ajuda e suporte
+                </p>
+              </div>
+            </div>
+            <div
+              className="menu__item"
+            >
+              <div
+                className="menu__item-title"
+              >
+                <p>
+                  Tarifas
+                </p>
+              </div>
+              <div
+                className="menu__item-subtitle"
+              >
+                <p>
+                  Taxas e custos
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
