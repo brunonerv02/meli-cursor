@@ -65,8 +65,9 @@ export default function Menu({ isOpen, closeMenu }) {
               className="menu__container"
               onClick={(e) => e.stopPropagation()}
             >
-              <div
+              <motion.div
                 className="menu__column"
+                variants={animationVariants.menuItem}
               >
                 <video 
                   ref={videoRef}
@@ -79,7 +80,7 @@ export default function Menu({ isOpen, closeMenu }) {
                   playsInline
                 >
                 </video>
-              </div>
+              </motion.div>
               <div
                 className="menu__column"
               >
