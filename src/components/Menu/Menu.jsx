@@ -28,6 +28,18 @@ const animationVariants = {
         ease: "easeOut"
       }
     }
+  },
+  videoItem: {
+    hidden: { opacity: 0, y: -10 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.4, // Você pode controlar a duração do vídeo aqui
+        ease: "easeOut",
+        delay: 0.2 // Atraso para o vídeo aparecer
+      }
+    }
   }
 };
 
@@ -67,7 +79,7 @@ export default function Menu({ isOpen, closeMenu }) {
             >
               <motion.div
                 className="menu__column"
-                variants={animationVariants.menuItem}
+                variants={animationVariants.videoItem}
               >
                 <video 
                   ref={videoRef}
