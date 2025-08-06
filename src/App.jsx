@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header/Header';
 import Preloader from './components/Preloader/Preloader';
+import PasswordProtection from './components/PasswordProtection/PasswordProtection';
 
 // Import assets to be preloaded
 import imgBg5 from './assets/images/img-bg5.png';
@@ -14,9 +15,12 @@ const assetsToPreload = [
 ];
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (!isAuthenticated) return;
+
     const preloadAssets = async () => {
       try {
         const promises = assetsToPreload.map((src) => {
@@ -49,7 +53,11 @@ function App() {
     };
 
     preloadAssets();
-  }, []);
+  }, [isAuthenticated]);
+
+  if (!isAuthenticated) {
+    return <PasswordProtection onAuthenticate={() => setIsAuthenticated(true)} />;
+  }
 
   return (
     <>
