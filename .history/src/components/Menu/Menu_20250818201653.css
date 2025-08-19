@@ -1,0 +1,178 @@
+/* src/components/Menu/Menu.css */
+
+.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: fit-content;
+}
+
+.menu__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1440px;
+  padding: 80px 80px 80px;
+  margin: 0 auto;
+  border-radius: 0 0 16px 16px;
+  background-color: #fff;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+  /* Garante que a altura se ajuste ao conteúdo */
+  height: fit-content;
+}
+
+.menu__column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.menu__column:not(:first-child) {
+    justify-content: flex-start;
+}
+
+.menu__column--new {
+  gap: 19px;
+  width: 233px;
+}
+
+.menu__image {
+  height: 167px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+.menu__title-new {
+  font-family: 'Proxima Nova', bold;
+  font-weight: 700;
+  color: #2f2f2f;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.menu__cta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.menu__cta::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 0.8px;
+  background-color: #3483fa;
+  opacity: 0;
+  transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.menu__cta:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.menu__cta p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #3483fa;
+  line-height: 1.25;
+}
+
+.menu__cta img {
+  width: 16px;
+  height: 16px;
+}
+
+.menu__title {
+  font-family: 'Proxima Nova', bold;
+  font-weight: 700;
+  color: #2f2f2f;
+  font-size: 24px;
+  width: 215px;
+}
+
+.menu__title p {
+    line-height: 32px;
+}
+
+.menu__category {
+  font-family: 'Proxima Nova', semibold;
+  font-weight: 600;
+  color: #ababab;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em; /* 0.64px */
+}
+
+.menu__category p {
+    line-height: 20px;
+}
+
+.menu__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem; /* ajustado */
+  align-items: flex-start;
+  color: rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+}
+
+.menu__item-title {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.menu__item-title {
+  font-family: 'Proxima Nova', bold;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.menu__item-title p {
+    line-height: 24px;
+    white-space: pre;
+}
+
+.menu__item-subtitle {
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-10px);
+  transition: all 0.8s ease-in-out;
+}
+
+.menu__item-subtitle p {
+    line-height: 18px;
+    white-space: pre;
+}
+
+/* Efeito de hover no container do menu */
+.menu:has(.menu__item-title:hover) .menu__item-title:not(:hover) {
+  opacity: 0.5;
+}
+
+.menu__item:hover .menu__item-subtitle {
+  max-height: 50px; /* Ajuste este valor se o subtítulo for maior */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu__category + .menu__item {
+  margin-top: 1rem; /* 16px */
+}

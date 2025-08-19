@@ -1,0 +1,133 @@
+/* src/components/Menu2/Menu2.css */
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  padding-top: 120px; /* Altura da navbar */
+  background-color: rgba(255, 255, 255, 0.931);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Para compatibilidade com Safari */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding-bottom: 80px; /* Mantém o padding inferior */
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  width: 100%;
+}
+
+.menu__container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: flex-start;;
+  justify-content: space-between;
+  max-width: 1205.4px;
+  padding: 0 1rem; /* Add some padding for smaller screens */
+}
+
+.menu__column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* 16px */
+  align-items: flex-start;
+}
+
+.menu__column:not(:first-child) {
+    justify-content: flex-start;
+}
+
+.menu__video {
+  width: 250.4px;
+  height: auto;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.menu__title {
+  font-family: 'Proxima Nova', bold;
+  font-weight: 700;
+  color: #2f2f2f;
+  font-size: 24px;
+  width: 215px;
+}
+
+.menu__title p {
+    line-height: 32px;
+}
+
+.menu__category {
+  font-family: 'Proxima Nova', semibold;
+  font-weight: 600;
+  color: #ababab;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em; /* 0.64px */
+}
+
+.menu__category p {
+    line-height: 20px;
+}
+
+.menu__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem; /* ajustado */
+  align-items: flex-start;
+  color: rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+}
+
+.menu__item-title {
+  transition: opacity 0.3s ease;
+}
+
+.menu__item-title {
+  font-family: 'Proxima Nova', bold;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.menu__item-title p {
+    line-height: 24px;
+    white-space: pre;
+}
+
+.menu__item-subtitle {
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(-0px);
+  transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.4s ease-out;
+}
+
+.menu__item-subtitle p {
+    line-height: 18px;
+    white-space: pre;
+}
+
+/* Efeito de hover no container do menu */
+.menu:hover .menu__item-title {
+  opacity: 0.5;
+}
+
+/* Restaura a opacidade do item específico em hover */
+.menu:hover .menu__item:hover .menu__item-title {
+  opacity: 1;
+}
+
+.menu:hover .menu__item:hover .menu__item-subtitle {
+  opacity: 1;
+  max-height: 50px; /* Adjust as needed */
+  transform: translateY(0);
+}
+
+.menu__category + .menu__item {
+  margin-top: 1rem; /* 16px */
+}
