@@ -246,7 +246,7 @@ export default function Menu2({ isOpen, closeMenu }) {
                     className="menu__item-subtitle"
                   >
                     <p>
-                    
+                    Conhecer o Programa de parcerias
                     </p>
                   </div>
                 </motion.div>
@@ -264,7 +264,7 @@ export default function Menu2({ isOpen, closeMenu }) {
                   <div
                     className="menu__item-subtitle"
                   >
-                    <p>{``}</p>
+                    <p>{`Opções a partir de R$ 1 `}</p>
                   </div>
                 </motion.div>
               </div>

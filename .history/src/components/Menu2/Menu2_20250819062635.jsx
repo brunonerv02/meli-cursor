@@ -85,10 +85,10 @@ export default function Menu2({ isOpen, closeMenu }) {
                   style={{ backgroundImage: `url('${menuImage}')` }}
                 />
                 <div className="menu__title-new">
-                  <p>Soluções de venda, gestão e crédito</p>
+                  <p>A conta completa do Mercado Livre</p>
                 </div>
                 <div className="menu__cta">
-                  <p>Conhecer Conta Negócio</p>
+                  <p>Conhecer Conta Digital</p>
                   <img src={iconArrow} alt="arrow icon" />
                 </div>
               </motion.div>
@@ -246,7 +246,7 @@ export default function Menu2({ isOpen, closeMenu }) {
                     className="menu__item-subtitle"
                   >
                     <p>
-                    
+                    Conhecer o Programa de parcerias
                     </p>
                   </div>
                 </motion.div>
@@ -264,7 +264,7 @@ export default function Menu2({ isOpen, closeMenu }) {
                   <div
                     className="menu__item-subtitle"
                   >
-                    <p>{``}</p>
+                    <p>{`Opções a partir de R$ 1 `}</p>
                   </div>
                 </motion.div>
               </div>

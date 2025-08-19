@@ -1,4 +1,4 @@
-/* src/components/Menu/Menu.css */
+/* src/components/Menu2/Menu2.css */
 
 .menu {
   position: absolute;
@@ -6,7 +6,7 @@
   left: 0;
   z-index: 50;
   padding: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.931);
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -14,7 +14,6 @@
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   width: 100%;
-  height: auto;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
 }
 
@@ -28,7 +27,6 @@
   padding: 120px 80px 80px;
   border-radius: 0 0 16px 16px;
   background-color: #fff;
-  /* Garante que a altura se ajuste ao conteúdo */
   height: fit-content;
 }
 
@@ -37,7 +35,34 @@
   flex-direction: column;
   gap: 24px;
   align-items: flex-start;
-  height: 100%;
+}
+
+.menu__column-scrollable {
+  height: 465px;
+  overflow-y: visible;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-right: 16px; /* Para evitar que a barra de rolagem cubra o conteúdo */
+}
+
+/* Customização da barra de rolagem */
+.menu__column-scrollable::-webkit-scrollbar {
+  width: 8px;
+}
+
+.menu__column-scrollable::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.menu__column-scrollable::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.menu__column-scrollable::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .menu__column:not(:first-child) {
@@ -46,7 +71,7 @@
 
 .menu__column--new {
   gap: 19px;
-  width: 270px;
+  width: 233px;
 }
 
 .menu__image {
@@ -141,6 +166,7 @@
 .menu__item-title {
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
+  margin-bottom: 4px;
 }
 
 .menu__item-title {
@@ -162,6 +188,12 @@
   transition: opacity 0.4s ease-in-out, max-height 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
+.menu__item:hover .menu__item-subtitle {
+  opacity: 1;
+  max-height: 50px; /* Ajuste conforme necessário */
+  transform: translateY(0);
+}
+
 .menu__item-subtitle p {
     line-height: 18px;
     white-space: pre;
@@ -172,10 +204,9 @@
   opacity: 0.5;
 }
 
-.menu__item:hover .menu__item-subtitle {
+.menu:hover .menu__item:hover .menu__item-subtitle {
   opacity: 1;
-  max-height: 50px; /* Ajuste conforme necessário */
-  transform: translateY(0);
+  transform: translateX(0);
 }
 
 .menu__category + .menu__item {
