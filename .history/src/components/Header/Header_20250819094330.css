@@ -50,7 +50,7 @@
 }
 
 .header--blur::before {
-  filter: blur(3px);
+  filter: blur(5px);
 }
 
 .header--blur::after {

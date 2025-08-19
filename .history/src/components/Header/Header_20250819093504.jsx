@@ -36,7 +36,7 @@ export default function Header({ activeMenu, setActiveMenu }) {
   };
 
   return (
-    <div className={`header ${activeMenu ? 'header--blur' : ''}`}>
+    <div className="header">
       <motion.div
         className={`navbar ${activeMenu ? 'navbar--menu-open' : ''}`}
         variants={animationVariants.navbar}

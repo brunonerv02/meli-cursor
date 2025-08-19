@@ -78,6 +78,7 @@ function App() {
           visibility: loading ? 'hidden' : 'visible'
         }}
       >
+        <div className={`background-container ${activeMenu ? 'background-container--blur' : ''}`} />
         <Header activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
       </div>
     </>
